@@ -17,9 +17,9 @@ try:
         cursor.execute(create_table_query)
         insert_records_query = """
         INSERT INTO example_table (name, age) VALUES
-        ('John Doe', 25),
-        ('Jane Smith', 30),
-        ('Bob Johnson', 22)
+        ('santhosh', 20),
+        ('suriya', 20),
+        ('arjun', 22)
         """
         cursor.execute(insert_records_query)
     connection.commit()
