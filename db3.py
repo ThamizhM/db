@@ -30,17 +30,24 @@ try:
             print("Records inserted successfully!")
         elif option == 3:
             create1_table_query = """
-            alter table example_table add(adress int)
+            alter table example_table add(gender varchar(4))
             """
             cursor.execute(create1_table_query)
             print("Table altered successfully!")
         elif option == 4:
             update_record_query="""
             update example_table
-            set adress = 'america'
-            where age = '20';
+            set gender = 'm'
+            where age = 20
             """
+            cursor.execute(update_record_query)
             print("Table updated successfully")
+        elif option == 5:
+            select_query= """
+            select * from example_table
+            """
+            cursor.execute(select_query)
+            print(example_table)
         else:
             print("Invalid option")
 
